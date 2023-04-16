@@ -1,6 +1,6 @@
 FROM openjdk:17-alpine
 VOLUME /tmp
-ARG JAR_FILE=build/libs/oko-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE=build/libs/umag-0.0.1-SNAPSHOT.jar
 COPY ${JAR_FILE} app.jar
 
 ENTRYPOINT ["java"]
