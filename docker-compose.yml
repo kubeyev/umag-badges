@@ -2,11 +2,11 @@ version: '3.3'
 services:
   server:
     environment:
-      DB_USER: ${DB_USER}:root
-      DB_NAME: ${DB_NAME}:umag
-      DB_PASS: ${DB_PASS}:pass
-      DB_HOST: ${DB_HOST}:0.0.0.0
-      DB_PORT: ${DB_PORT}:5443
+      DB_USER: root
+      DB_NAME: umag
+      DB_PASS: pass
+      DB_HOST: 0.0.0.0
+      DB_PORT: 5443
     build:
       context: .
     restart: always
