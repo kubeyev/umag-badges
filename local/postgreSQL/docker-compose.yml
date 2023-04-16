@@ -1,0 +1,27 @@
+version: '2.0'
+
+services:
+  timescaledb:
+    image: timescale/timescaledb-ha:pg12-latest
+    restart: always
+    ports:
+      - "5443:5432"
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_DB=umag
+    volumes:
+      - ./timescaledb-data:/var/lib/postgresql/data
+
+#version: '3.5'
+#services:
+#   postgres:
+#    container_name: local-db-postgres
+#    image: postgres:13.2
+#    ports:
+#    - "5433:5432"
+#    environment:
+#      POSTGRES_DB: okointellect
+#      POSTGRES_USER: okointellect
+#      POSTGRES_PASSWORD: password
+#    restart: unless-stopped
